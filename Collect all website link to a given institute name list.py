@@ -5,7 +5,7 @@ import csv
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import requests
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 # with open('urls.txt', 'r') as fobj:
 #     hospitals = fobj.readlines()
 hospitals = [
@@ -58,7 +58,7 @@ hospitals = [
 count =1
 
 for search_String in hospitals:
-    driver = webdriver.Chrome("E:\All Software\Different Software\chromedriver")
+    driver = webdriver.Chrome("D:\All Software\Different Software\chromedriver")
     # driver.set_window_position(400,100)
     # driver.get("https://www.google.com")
     driver.get('https://www.bing.com/')
