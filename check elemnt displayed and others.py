@@ -1,7 +1,7 @@
 import time
 from selenium import webdriver
 
-driver = webdriver.Chrome("D:\All Software\Different Software\chromedriver")
+driver = webdriver.Chrome("D:\Automation software\Chromedriver88\chromedriver")
 driver.get("http://newtours.demoaut.com/")
 driver.maximize_window()
 
