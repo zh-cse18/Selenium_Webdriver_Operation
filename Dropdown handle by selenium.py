@@ -18,3 +18,5 @@ drp.select_by_value("Radio-2")
 # select by visiable text
 drp.select_by_visible_text("Morning")
 
+print(len(drp.options)-1)
+
