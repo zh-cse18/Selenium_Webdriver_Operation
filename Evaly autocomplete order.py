@@ -22,28 +22,30 @@ try:
 finally:
     pass
 
-
 time.sleep(5)
-# write Asus Laptop in search box
-driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[1]/div/div[1]/div/div/input').send_keys("Asus Laptop")
-# Press enter button
-pyautogui.press('enter')
-
-
+#Login start
 try:
     element = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located(
-            (By.XPATH, '//*[@id="__next"]/div/div/div[3]/div/div[2]/div[2]/ul/li[13]/a/a/div/div[1]/div/img'))
+            (By.XPATH, "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]/span[1]/span[1]"))
     )
     element.click()
 finally:
     pass
-#
-#
-# try:
-#     element = WebDriverWait(driver, 10).until(
-#         EC.presence_of_element_located((By.XPATH, '//*[@id="__next"]/div/div[2]/div[1]/div/div[2]/div/button/span/span/svg'))
-#     )
-#     element.click()
-# finally:
-#     pass
+
+time.sleep(5)
+driver.find_element_by_xpath('//input[@name="phone"]').send_keys('01746484619')
+driver.find_element_by_xpath('//input[@name="password"]').send_keys('100barloveu#')
+pyautogui.press('enter')
+#login completed
+time.sleep(10)
+
+#click all shop
+driver.find_element_by_xpath("//a[contains(text(),'All Shops')]").click()
+time.sleep(5)
+
+#click on Evaly Hero Official Store
+driver.find_element_by_xpath("//p[contains(text(),'Evaly Hero Official Store')]").click()
+
+#click on buy now button
+driver.find_element_by_xpath("//body/div[@id='__next']/div[1]/div[3]/div[1]/div[3]/div[3]/div[2]/div[1]/div[4]/button[1]").click()
