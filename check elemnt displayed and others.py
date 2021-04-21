@@ -6,7 +6,7 @@ driver.get("http://newtours.demoaut.com/")
 driver.maximize_window()
 
 username = driver.find_element_by_name('userName')
-print(username.is_displayed(),username.is_enabled())
+print(username.is_displayed(), username.is_enabled())
 if(username.is_displayed() and username.is_enabled()):
     username.send_keys('zh-cse18')
 
@@ -18,7 +18,7 @@ if(password.is_displayed(),password.is_enabled()):
 login = driver.find_element_by_name('login')
 login.click()
 
-round_trip_radio_button= driver.find_element_by_css_selector("input[value = roundtrip]").is_selected()
+round_trip_radio_button = driver.find_element_by_css_selector("input[value = roundtrip]").is_selected()
 driver.find_element_by_css_selector("input[value = oneway]").click()
 
 

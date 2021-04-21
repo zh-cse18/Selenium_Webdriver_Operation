@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-driver = webdriver.Chrome("D:\Automation software\Chromedriver88\chromedriver")
+driver = webdriver.Chrome("F:\Development\chromedriver\chromedriver")
 driver.maximize_window()
 # open evaly site
 driver.get("https://evaly.com.bd/")
