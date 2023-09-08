@@ -1,7 +1,12 @@
 import time
 from selenium import webdriver
 
-driver = webdriver.Chrome("D:\Automation software\Chromedriver88\chromedriver")
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Setup the ChromeDriver with webdriver-manager
+options = webdriver.ChromeOptions()
+# options.add_argument('--headless')
+driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
 driver.get("http://newtours.demoaut.com/")
 driver.maximize_window()
 
