@@ -13,12 +13,12 @@ driver.maximize_window()
 username = driver.find_element_by_name('userName')
 print(username.is_displayed(), username.is_enabled())
 if(username.is_displayed() and username.is_enabled()):
-    username.send_keys('zh-cse18')
+    username.send_keys('zahid')
 
 password = driver.find_element_by_name('password')
 print(password.is_displayed(),password.is_enabled())
 if(password.is_displayed(),password.is_enabled()):
-    password.send_keys('100barloveu')
+    password.send_keys('passwordunknown')
 
 login = driver.find_element_by_name('login')
 login.click()
